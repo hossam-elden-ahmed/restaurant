@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Reserve Table</title>
+        <link rel="stylesheet" href="css/Style.css">
+        <script src="js/Master.js"></script>
+    </head>
+    <body>
+        <div class="Container">
+             <!-------- Landing page  -------------->
+            <div class="Landing-page">
+                <div class="Nav-Bar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="Reserve">
+                    <h1>Little Lemon</h1>
+                    <h2>Restaurant</h2>
+                    <div>
+                        <P>We are a family owned 
+                            Mediterranean restaurant, 
+                            focused on traditional 
+                            recipes served with a 
+                            modern twist.</P>
+                        <img src="images/fig.jpg">
+                    </div>
+                    <button><a href="Index2.html">Reserve a table</a></button>
+                </div>
+            </div>
+            <!-------- Landing page  -------------->
+            <!-------- Order section -------------->
+            <div class="order">
+                <h2>Order FOR DELIVERY!</h2>
+                <div class="menu">
+                    <button onclick="showDiv('Lunch')">Lunch</button>
+                    <button onclick="showDiv('Mains')">Mains</button>
+                    <button onclick="showDiv('Desserts')">Desserts</button>
+                    <button onclick="showDiv('A-Le-Carte')">A Le Carte</button>
+                    <button onclick="showDiv('Dinner')">Dinner</button>
+                    <button onclick="showDiv('Species')">Species</button>
+                </div>
+                <div class="order-type">
+                    <div class="Food dis" id="Lunch">
+                        <h2>Greek salad</h2>
+                        <div>
+                            <p>The famous g1eek salad of c1ispy lettuce, peppers, olives and our..</p>
+                            <img src="images/fig.jpg">
+                        </div>
+                            <p>$12.99</p>
+                    </div>
+                    <div class="Food dis" id="Mains">
+                        <h2>Brushetta</h2>
+                        <div>
+                            <p>Our B1uschetta is made from g1illed b1ead that has been..</p>
+                            <img src="images/fig.jpg">
+                        </div>
+                            <p>$7.99</p>
+                    </div>
+                    <div class="Food dis" id="Desserts">
+                        <h2>Grilled Fish</h2>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetu1 adipiscing elit.....</p>
+                            <img src="images/fig.jpg">
+                        </div>
+                            <p>$20.00</p>
+                    </div>
+                    <div class="Food dis" id="A-Le-Carte">
+                        <h2>فول</h2>
+                        <div>
+                            <p>حبات الفول مسخنة مع الماء و الزيت الحار لتعطى نكهة لا تقاوم</p>
+                            <img src="images/fig.jpg">
+                        </div>
+                            <p>20 جندى</p>
+                    </div>
+                </div>
+            </div>
+            <!-------- Order section -------------->
+        </div>
+        <script>
+            function showDiv(DivId) {
+                // Hide all Divs
+                var divs = document.querySelectorAll('.Food');
+                for (var i = 0; i < divs.length;i++) {
+                    divs[i].style.display = "none";
+                }
+                
+                // show the selected div
+                var selectedDiv = document.getElementById(DivId);
+                selectedDiv.style.display = "block";
+            }
+        </script>
+    </body>
+</html>

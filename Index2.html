@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Reserve Table</title>
+        <link rel="stylesheet" href="css/Style2.css">
+        <script src="js/Master.js"></script>
+    </head>
+    <body>
+        <div class="Container">
+             <!-------- Landing page  -------------->
+            <div class="Landing-page">
+                <div class="Nav-Bar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="Reserve">
+                    <h1>Book Now !</h1>
+                </div>
+            </div>
+            <!-------- Landing page  -------------->
+            <!-------- Reserve a table ------------>
+            <h2>To book a reservation, please fill-out this form.</h2>
+            <form>
+                <h3>Select Branch *</h3>
+                <select id="SelBranch">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                </select>
+                <br/><br/>
+                <p>Select Date :</p> <input type="date" id="SelDate"/> <br/><br/>
+                <p>Select Time :</p>
+                <select>
+                    <option>Lunch</option>
+                    <option>Dinner</option>
+                </select> <br/><br/> <br/><br/>
+                    <P>Number of guests *</P>    <input type="number" Id="NOG"/> <br/><br/>
+                    <P>Name * </P>               <input type="text" Id="Name"/> <br/><br/>
+                    <P>Email *</P>               <input type="text" Id="Email"/> <br/><br/>
+                    <P>Phone number * </P>       <input type="number" Id="PhNumber"/> <br/><br/>
+                    <P>Sepcial Instruction *</P> <textarea id="SInstruction"></textarea><br/><br/>
+                    <input type="checkbox"><P>I agree with the Terms and Condition, and Privacy Policy.</P>
+            </form>
+            <button><a href="Index3.html" id="submitBtn">Reserve a Table</a></button>
+            <button>Cancel</button>
+            <!-------- Reserve a table ------------>
+        </div>
+        <script>
+            document.getElementById('submitBtn').addEventListener('click', function() {
+                const SelBranch       = document.getElementById('SelBranch').value;
+                const SelDate         = document.getElementById('SelDate').value;
+                const SelTime         = document.getElementById('SelTime').value;
+                const NOG             = document.getElementById('NOG').value;
+                const Name            = document.getElementById('Name').value;
+                const Email           = document.getElementById('Email').value;
+                const PhNumber        = document.getElementById('PhNumber').value;
+                const SInstruction    = document.getElementById('SInstruction').value;
+                
+                //Store the data in local storage
+                localStorage.setItem('Select_Branch', SelBranch);
+                localStorage.setItem('Select_Date', SelDate);
+                localStorage.setItem('Select_Time', SelTime);
+                localStorage.setItem('Number_of_guests', NOG);
+                localStorage.setItem('Name', Name);
+                localStorage.setItem('Email', Email);
+                localStorage.setItem('Phone_number', PhNumber);
+                localStorage.setItem('Sepcial_Instruction', SInstruction);
+                
+                //Redirect to the other page
+                window.location.href = 'Index3.html';
+            });
+        </script>
+    </body>
+</html>

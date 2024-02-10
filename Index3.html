@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Reserve Table</title>
+        <link rel="stylesheet" href="css/Style3.css">
+    </head>
+    <body>
+        <div class="Container">
+             <!-------- Landing page  -------------->
+            <div class="Landing-page">
+                <div class="Nav-Bar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="Reserve">
+                    <h1>Book Now !</h1>
+                </div>
+            </div>
+            <!-------- Landing page  -------------->
+            <!-------- Reserve a table ------------>
+            <h1>You’re almost done. Please review your details.</h1>
+            <h2>Your reservation information:</h2>
+            <div class="form">
+                <div>
+                    <h3>Selected Branch:</h3>
+                    <h3>Date:</h3>
+                    <h3>Time:</h3>
+                    <h3>Number of guests:</h3>
+                    <h3>Name:</h3>
+                    <h3>Email:</h3>
+                    <h3>Phone number:</h3>
+                    <h3>Special Instruction:</h3>
+                </div>
+                <div>
+                    <div id="SelBranch"></div>
+                    <div id="SelDate"></div>
+                    <div id="SelTime"></div>
+                    <div id="NOG"></div>
+                    <div id="Name"></div>
+                    <div id="Email"></div>
+                    <div id="PhNumber"></div>
+                    <div id="spInstruction"></div>
+                </div>
+            </div>
+            <button>Proceed to Checkout</button>
+            <button>Cancel</button>
+            <!-------- Reserve a table ------------>
+        </div>
+        <script>
+            // Retrieve data from localStorage
+            const SelBranch       = localStorage.getItem('Select_Branch');
+            const SelDate         = localStorage.getItem('Select_Date');
+            const SelTime         = localStorage.getItem('Select_Time');
+            const NOG             = localStorage.getItem('Number_of_guests');
+            const Name            = localStorage.getItem('Name');
+            const Email           = localStorage.getItem('Email');
+            const PhNumber        = localStorage.getItem('Phone_number');
+            const SInstruction    = localStorage.getItem('Sepcial_Instruction');
+            
+            // Display data in the div elements
+            document.getElementById('SelBranch').textContent     = SelBranch;
+            document.getElementById('SelDate').textContent       = SelDate;
+            document.getElementById('SelTime').textContent       = SelTime;
+            document.getElementById('NOG').textContent           = NOG;
+            document.getElementById('Name').textContent          = Name;
+            document.getElementById('Email').textContent         = Email;
+            document.getElementById('PhNumber').textContent      = PhNumber;
+            document.getElementById('spInstruction').textContent = SInstruction;
+        </script>
+    </body>
+</html>
